@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 py-10 text-gray-700 w-full fixed bottom-0 left-0">
+    <footer className="bg-gray-100 py-10 text-gray-700 w-full mt-auto">
       <div className="container mx-auto px-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
         {/* Company Info */}
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Eshop</h1>
           <p className="mt-2 text-sm">123 Eshop Street, Nairobi, Kenya</p>
         </div>
-        
+
         {/* Navigation Links */}
         <div>
           <h2 className="text-lg font-semibold mb-2">Links</h2>
@@ -20,7 +20,7 @@ export default function Footer() {
             <li><Link to="/contact" className="hover:text-gray-900">Contact</Link></li>
           </ul>
         </div>
-        
+
         {/* Newsletter Subscription */}
         <div>
           <h2 className="text-lg font-semibold mb-2">Newsletter</h2>
@@ -34,10 +34,10 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      
-      {/* Copyright */}
+
+      {/* Copyright with Dynamic Year */}
       <div className="text-center text-gray-600 text-sm mt-8 border-t pt-4">
-        <p>© 2025 Eshop. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Eshop. All rights reserved.</p>
       </div>
     </footer>
   );
