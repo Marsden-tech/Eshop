@@ -6,7 +6,8 @@ import {
   User, 
   ShoppingCart, 
   Heart, 
-  LogOut 
+  LogOut, 
+  ShoppingCartIcon
 } from 'lucide-react';
 import PropTypes from 'prop-types';
 import useAuth from '../hooks/useAuth';
@@ -96,6 +97,12 @@ const Navbar = () => {
                   <User strokeWidth={2.5} size={20} />
                 </NavLink>
                 <NavLink 
+                  to="/cart" 
+                  className="text-gray-700 hover:text-yellow-600 transition-colors duration-200"
+                >
+                  <ShoppingCartIcon strokeWidth={2.5} size={20} />
+                </NavLink>
+                <NavLink 
                   to="/wishList" 
                   className="text-gray-700 hover:text-yellow-600 transition-colors duration-200"
                 >
@@ -159,6 +166,9 @@ const Navbar = () => {
               <>
                 <NavItem to="/profile" setIsOpen={setIsOpen} icon={User}>
                   Profile
+                </NavItem>
+                <NavItem to="/cart" setIsOpen={setIsOpen} icon={ShoppingCartIcon}>
+                  Cart
                 </NavItem>
                 <NavItem to="/wishList" setIsOpen={setIsOpen} icon={Heart}>
                   Wish List
